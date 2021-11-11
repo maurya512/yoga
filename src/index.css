@@ -62,7 +62,7 @@
 }
 
 #header .brand-name {
-  color:rgba(31, 197, 73, 0.836);
+  color: rgba(31, 197, 73, 0.836);
 }
 
 #header h2 {
@@ -78,7 +78,7 @@
   padding: 10px 30px;
   border-radius: 50px;
   transition: 0.5s;
-  color:rgba(6, 139, 39, 0.836);
+  color: rgba(6, 139, 39, 0.836);
   border: 2px solid rgba(31, 197, 73, 0.836);
   text-transform: none;
 }
@@ -90,4 +90,27 @@
 
 .header-img {
   text-align: right;
+}
+
+/* img animation */
+#header .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
