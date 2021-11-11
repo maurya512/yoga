@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="row">
           {/* 10 out of 12 columns to ensure that the div is centered correctly  */}
           <div className="col-10 mx-auto">
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
               <div className="container-fluid">
                 <NavLink className="navbar-brand" to="/">
                   Yoga
