@@ -1,20 +1,21 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <>
       {/* Centers the navbar on the web page */}
-      {/* ! how to center a div */}
-      {/* define a div as a fluid container */}
+      {/* ! how to center NavLink div */}
+      {/* define NavLink div as NavLink fluid container */}
       <div className="container-fluid nav-bg">
         {/* insert rows into it */}
         <div className="row">
           {/* 10 out of 12 columns to ensure that the div is centered correctly  */}
           <div className="col-10 mx-auto">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-              <a className="navbar-brand" href="#">
+              <NavLink className="navbar-brand" to="/">
                 Yoga
-              </a>
+              </NavLink>
               <button
                 className="navbar-toggler"
                 type="button"
@@ -32,31 +33,32 @@ const Navbar = () => {
                 id="navbarSupportedContent"
               >
                 {/* ! the newer version of bootstrap uses ms instead of ml */}
-                <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li className="nav-item active">
-                    <a className="nav-link" href="#">
+                <ul className="navbar-nav ms-auto">
+                  <li className="nav-item">
+                      {/* changed from anchor tag to navlink to make sure the page doesn't render while changing components */}
+                    <NavLink exact className="nav-link" to="/">
                       Home <span className="sr-only"></span>
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <NavLink exact className="nav-link" to="/service">
                       Services
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <NavLink exact className="nav-link" to="/about">
                       About
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <NavLink exact className="nav-link" to="/contact">
                       Contact
-                    </a>
+                    </NavLink>
                   </li>
                   {/* <li className="nav-item dropdown">
-              <a
+              <NavLink
                 className="nav-link dropdown-toggle"
-                href="#"
+                to="#"
                 id="navbarDropdown"
                 role="button"
                 data-toggle="dropdown"
@@ -64,18 +66,18 @@ const Navbar = () => {
                 aria-expanded="false"
               >
                 Dropdown
-              </a>
+              </NavLink>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="#">
+                <NavLink className="dropdown-item" to="#">
                   Action
-                </a>
-                <a className="dropdown-item" href="#">
+                </NavLink>
+                <NavLink className="dropdown-item" to="#">
                   Another action
-                </a>
+                </NavLink>
                 <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">
+                <NavLink className="dropdown-item" to="#">
                   Something else here
-                </a>
+                </NavLink>
               </div>
             </li> */}
                 </ul>
