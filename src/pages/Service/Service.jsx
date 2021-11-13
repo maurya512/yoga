@@ -16,7 +16,7 @@ const Service = () => {
               {/* mapping the data from CData file */}
               {/* mapping the data lets us access all the data and render it */}
               {CData.map((val, ind) => {
-                return <Card imgsrc={val.imgsrc} title={val.title} />;
+                return <Card key={ind} imgsrc={val.imgsrc} title={val.title} />;
               })}
               <Card />
             </div>
