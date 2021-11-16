@@ -1,72 +1,82 @@
-import React from "react";
+import React, { useRef } from "react";
+// importing emailjs
+import emailjs, { init } from "emailjs-com";
+// initalize the user
+init("user_BOZUySatPuiuYCYuzaVro");
 
 const Contact = () => {
+  const form = useRef();
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_ntbd4ya",
+        "template_nmnbql5",
+        e.target,
+        "user_BOZUySatPuiuYCYuzaVro"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    //   resetting the form after it's being submit
+    e.target.reset();
+  }
   return (
-    <>
-      <div className="my-5">
-        <h1 className="text-center"> Contact US</h1>
-      </div>
-      <div className="container contact_div">
-        <div className="row">
-          <div className="col-md-6 col-10 mx-auto">
-            <form>
-              <div class="row">
-                <div class="col">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="First name"
-                  />
-                </div>
-                <div class="col">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Last name"
-                  />
-                </div>
-              </div>
-              {/* phone number form input */}
-              <div className="form-group">
-                <label for="exampleFormControlTextarea3"></label>
-                <input
-                  type="number"
-                  className="form-control"
-                  id="exampleFormControlTextarea3"
-                  placeholder="Phone Number"
-                ></input>
-              </div>
-              {/* email address form input */}
-              <div className="form-group">
-                <label for="exampleFormControlInput1"></label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="Email Address"
-                />
-              </div>
-              {/* Program inquiring about */}
-              <div className="form-group">
-                <label for="exampleFormControlTextarea1"></label>
-                <textarea
-                  className="form-control"
-                  id="exampleFormControlTextarea1"
-                  rows="3"
-                  placeholder="Message"
-                ></textarea>
-              </div>
-              {/* submit form button */}
-              <div className="col-12">
-                  <button className="btn btn-outline-primary" type="submit">
-                      Submit
-                  </button>
-              </div>
-            </form>
+    <div>
+      <div className="container">
+        <form ref={form} onSubmit={sendEmail}>
+          <div className="col-8 form-group mx-auto">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Name"
+              name="name"
+            />
           </div>
-        </div>
+          <div className="col-8 form-group pt-2 mx-auto">
+            <input
+              type="email"
+              className="form-control"
+              placeholder="Email Address"
+              name="email"
+            />
+          </div>
+          <div className="col-8 form-group pt-2 mx-auto">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Subject"
+              name="subject"
+            />
+          </div>
+          <div className="col-8 form-group pt-2 mx-auto">
+            <textarea
+              className="form-control"
+              id=""
+              cols="30"
+              rows="8"
+              placeholder="Your Message"
+              name="message"
+            ></textarea>
+          </div>
+          <div className="col-8 pt-3 mx-auto">
+            <input
+              type="submit"
+              className="btn btn-outline-success"
+              value="Send Message"
+            ></input>
+          </div>
+        </form>
       </div>
-    </>
+    </div>
   );
 };
 
