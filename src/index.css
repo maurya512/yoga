@@ -78,9 +78,10 @@
   padding: 10px 30px;
   border-radius: 50px;
   transition: 0.5s;
-  color: rgba(6, 139, 39, 0.836);
+  color: rgba(4, 51, 16, 0.836);
   border: 2px solid rgba(31, 197, 73, 0.836);
   text-transform: none;
+  text-decoration: none;
 }
 
 #header .btn-get-started:hover {
@@ -113,4 +114,44 @@
   100% {
     transform: translateY(-10px);
   }
+}
+
+/* button styling for card component */
+.card-body .btn-get-started {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: rgba(4, 51, 16, 0.836);
+  border: 2px solid rgba(31, 197, 73, 0.836);
+  text-transform: none;
+  text-decoration: none;
+}
+
+.card-body .btn-get-started:hover {
+  background: seagreen;
+  color: #fff;
+}
+
+/* button styling for contact component */
+.col-8 .btn-get-started {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: rgba(4, 51, 16, 0.836);
+  border: 2px solid rgba(31, 197, 73, 0.836);
+  text-transform: none;
+  text-decoration: none;
+}
+
+.col-8 .btn-get-started:hover {
+  background: seagreen;
+  color: #fff;
 }
