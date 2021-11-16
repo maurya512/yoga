@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Common from "../../components/Common/Common";
 // import images
-import yoga2 from "../../images/yogaimg1.svg";
+import yoga2 from "../../images/yogaimg2.svg";
 
 const About = () => {
   return (
@@ -13,7 +13,7 @@ const About = () => {
         brandname="everyone."
         tagline="All our services come with a 30 day money back guarantee*."
         imgsrc={yoga2}
-        visit="/contact"
+        visit="/service"
         btnname="Contact Now"
       />
     </>
