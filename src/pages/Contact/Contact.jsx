@@ -70,7 +70,7 @@ const Contact = () => {
           <div className="col-8 pt-3 mx-auto">
             <input
               type="submit"
-              className="btn btn-outline-success"
+              className="btn-get-started"
               value="Send Message"
             ></input>
           </div>
