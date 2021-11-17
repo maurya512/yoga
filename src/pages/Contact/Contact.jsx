@@ -33,7 +33,7 @@ const Contact = () => {
     <div>
       <div className="container">
         <form ref={form} onSubmit={sendEmail}>
-          <div className="col-8 form-group mx-auto">
+          <div className="col-8 form-group mx-auto ">
             <input
               type="text"
               className="form-control"

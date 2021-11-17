@@ -5,7 +5,7 @@ import service1 from "../../images/yogaimg1.svg";
 const Card = (props) => {
   return (
     <div className="col-md-4 col-10 mx-auto">
-      <div className="card">
+      <div className="card border-0">
         <img
           src={props.imgsrc}
           className="card-img-top"

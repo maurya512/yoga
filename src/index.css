@@ -7,6 +7,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+  background-color: #eae7dc;
 }
 
 .navbar {
@@ -16,7 +17,7 @@
 
 .navbar-brand {
   font-size: 1.9rem !important;
-  color: rgba(6, 139, 39, 0.836) !important;
+  color: #05386b !important;
 }
 
 .navbar a {
@@ -27,12 +28,12 @@
 /* special css styling for active component */
 .active {
   font-weight: bold;
-  border-bottom: 1px solid rgba(6, 139, 39, 0.836);
+  border-bottom: 1px solid #ac3b61;
 }
 
 /* hover effect for anchor tag in navbar */
 .navbar a:hover {
-  color: rgba(31, 197, 73, 0.836) !important;
+  color: #05386b !important;
 }
 
 /*  */
@@ -62,11 +63,11 @@
 }
 
 #header .brand-name {
-  color: rgba(31, 197, 73, 0.836);
+  color: #ac3b61;
 }
 
 #header h2 {
-  color: rgba(6, 139, 39, 0.836);
+  color: #116466;
   font-size: 24px;
 }
 
@@ -78,14 +79,14 @@
   padding: 10px 30px;
   border-radius: 50px;
   transition: 0.5s;
-  color: rgba(4, 51, 16, 0.836);
-  border: 2px solid rgba(31, 197, 73, 0.836);
+  color: #05386b;
+  border: 2px solid #116466;
   text-transform: none;
   text-decoration: none;
 }
 
 #header .btn-get-started:hover {
-  background: seagreen;
+  background: #ac3b61;
   color: #fff;
 }
 
@@ -125,14 +126,14 @@
   padding: 10px 30px;
   border-radius: 50px;
   transition: 0.5s;
-  color: rgba(4, 51, 16, 0.836);
-  border: 2px solid rgba(31, 197, 73, 0.836);
+  color: #05386b;
+  border: 2px solid #116466;
   text-transform: none;
   text-decoration: none;
 }
 
 .card-body .btn-get-started:hover {
-  background: seagreen;
+  background: #ac3b61;
   color: #fff;
 }
 
@@ -145,13 +146,17 @@
   padding: 10px 30px;
   border-radius: 50px;
   transition: 0.5s;
-  color: rgba(4, 51, 16, 0.836);
-  border: 2px solid rgba(31, 197, 73, 0.836);
+  color: #05386b;
+  border: 2px solid #116466;
   text-transform: none;
   text-decoration: none;
 }
 
 .col-8 .btn-get-started:hover {
-  background: seagreen;
+  background: #ac3b61;
   color: #fff;
+}
+
+.col-8 .form-group { 
+  border-color: #05386b;
 }
