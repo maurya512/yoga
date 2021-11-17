@@ -17,9 +17,16 @@ const Service = () => {
               {/* mapping the data lets us access all the data and render it */}
               {CData.map((val, ind) => {
                 // the data mapped from CData is treated as props and passed into the Card component and returned into the Card component as new array
-                return <Card key={ind} imgsrc={val.imgsrc} title={val.title} />;
+                return (
+                  <Card
+                    key={ind}
+                    imgsrc={val.imgsrc}
+                    title={val.title}
+                    description={val.description}
+                  />
+                );
               })}
-              <Card />
+              {/* <Card /> */}
             </div>
           </div>
         </div>
