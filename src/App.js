@@ -1,8 +1,8 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 // to enable the dropdown in navbar
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle"
-import { Routes, Route } from 'react-router-dom'
 import Contact from './pages/Contact/Contact'
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
